@@ -1,8 +1,8 @@
 <?php 
 	function r_recipe_options_mb($post){ 
-		$recipe_data 	= get_post_meta($post->ID, 'recipe_data', true);
+		$recipe_data 	= 	get_post_meta($post->ID, 'recipe_data', true);
 		if(!$recipe_data){
-			$recipe_data = array(
+			$recipe_data 	= 	array(
 				'ingredients' 	=>	'',
 				'time'	 		=> 	'',
 				'utensils'	 	=> 	'',

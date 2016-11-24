@@ -7,4 +7,6 @@ function recipe_admin_init(){
 
 	add_action('add_meta_boxes_recipe', 'r_create_metaboxes');
 	add_action('admin_enqueue_scripts', 'r_admin_enqueue');
+	add_filter( 'manage_edit-recipe_columns', 'add_new_recipe_columns' );
+	add_action( 'manage_recipe_posts_custom_column', 'manage_recipe_columns', 10, 2 );
 }

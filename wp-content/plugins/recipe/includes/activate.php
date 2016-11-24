@@ -27,4 +27,5 @@ function r_activate_plugin(){
 
 	dbDelta($createSQL);
 
+	wp_schedule_event( time(), 'daily', 'r_daily_recipe_hook' );
 }
